@@ -45,7 +45,7 @@ h1 {
 
 .navbar .nav-link-container {
     display: flex;
-
+    
     justify-content: space-between;
     min-width: 300px;
 
@@ -102,13 +102,14 @@ section {
     flex-direction: column;
     font-size: 2rem;
     font-weight: 300;
+    margin: 1.5rem 1.5rem;
 }
 
-.header-heading .my-name {
+.my-name {
     display: block;
     text-transform: capitalize;
     font-size: 4.5rem;
-    margin: 10px 0;
+    margin: 1rem 0;
     font-weight: 400;
 }
 
@@ -118,11 +119,10 @@ section {
 
 .img-container {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    position: relative;
-
-    flex: 0 1 0;
+    margin-right:1rem;    
 }
 
 .self-img {
@@ -130,7 +130,8 @@ section {
     inset: 60% 0 0 60%;
     transform: translate(-82%, -60%);
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
+    height:100%;
     object-fit: cover;
     border-radius: 30%;
 }
@@ -176,6 +177,7 @@ section {
 
 .aboutme-container {
     width: 100%;
+    
     margin: 5%;
     padding: 2%;
     display: flex;
@@ -215,23 +217,7 @@ section {
     margin: 30px 0;
 }
 
-.social-links {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
 
-.social-img {
-    width: 30px;
-    height: 30px;
-    opacity: .4;
-    transition: .5s;
-}
-
-.social-img:hover {
-    opacity: 1;
-}
 
 /* END ABOUT ME STYLING */
 
@@ -246,18 +232,19 @@ section {
     padding-top: 5vw;
 }
 
-.refactor-seo-img {
-    display:block;
+.refactor-seo-img, .js-img, .python-img {
+    /* display:block; */
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
-.refactor-container {
+.refactor-container, .js-container, .python-container {
     position:relative;
     width:100%;
+    max-height:100%;
 }
 
-.overlay {
+.overlay, .js-overlay, .python-overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -268,43 +255,83 @@ section {
     opacity: 0;
     transition: .5s ease;
     background-color: #008CBA;
+    font-size: 1.2rem;
+    text-align:center;
   }
 
-.refactor-name .refactor-info {
-    color: white;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+.refactor-name, .refactor-info, .js-name, .python-name {
+    transform:translate(0,200%);
+    line-height:3vh;
+}
 
-.refactor-container:hover .overlay {
-    opacity:0.75;
+.refactor-container:hover .overlay, 
+.js-container:hover .js-overlay,
+.python-container:hover .python-overlay {
+    opacity:0.85;
 }
 
 .work-wrapper {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 5%;
-    gap: 5%;
+    padding:2rem;
+    /* flex: 1 0 75%; */
 }
 
+.work-container {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding:2rem;
+}
 
-
+.js-img, .python-img {
+    padding:1.5rem;
+}
 
 /* END WORK STYLING */
 
+/* START CONTACT ME */
+.social-links {
+    margin-bottom: 10vh;
+}
+
+.social-img {
+    width: 100px;
+    height: 100px;
+    opacity: .4;
+}
+
+.social-img:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+.contact-container {
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    text-align:center;
+}
+
+/* END CONTACT ME */
+
 @media screen and (max-width: 768px) {
 
-    .navbar,
+    /* .navbar, */
     main,
     .header,
     .aboutme-container {
         flex-direction: column;
         height: auto;
+    }
+
+    .work-wrapper  {
+        display:flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        flex: 1 1 10%;
     }
 
     .header {
