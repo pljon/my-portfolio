@@ -1,0 +1,87 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+/* start navbar styles */
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 1px 8px #ddd;
+}
+
+h1 {
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header a {
+    text-decoration:none;
+    color: #555;
+    transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+    color: #29536e;
+}
+
+/* end navbar styles */
+
+/* start content-intro styles */
+.content-intro h2 {
+    font-size:22px;
+    margin-top:7px;
+}
+
+.content {
+    background: #dbffd3;
+    height: 600px;
+}
+
+.content-intro span {
+    color: #4887b7;
+    font-size: 28px;
+}
+
+.content .content-intro {
+    padding-top:180px;
+    float:left;
+    width: 600px;
+}
+
+.content .content-intro p {
+    font-size: 17px;
+}
+
+.content img {
+    /* float:left; */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* end content-intro styles */
+
+/* start about me */
+.about-me .about-me-content h2 {
+    font-size: 30px;
+    text-decoration:underline;
+    text-decoration-style:dashed;
+    text-decoration-thickness:5px;
+    text-decoration-color: #64adc4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* end about me */
+
